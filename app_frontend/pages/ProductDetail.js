@@ -247,9 +247,6 @@ const handleOrderClick1 = () => {
   router.push('/maincart');
 };
 
-const handleOrderClick2 = () => {
-router.push('/cartsummary');
-};
 
 
 return (
@@ -285,7 +282,6 @@ return (
                 </div>
                 <div className={styles.content5} >
                   <button className={styles.btbuy} onClick={handleOrderClick1}>เพิ่มลงตะกร้าสินค้า</button>
-                  <button className={styles.btcart} onClick={handleOrderClick2}>สั่งซื้อสินค้า</button>
                 </div>
                 <hr className={styles.divider}/>
                 <div className={`${styles.content6} row `}>รายละเอียดสินค้า</div>
