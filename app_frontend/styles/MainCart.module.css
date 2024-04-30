@@ -1,0 +1,28 @@
+.productsContainer {
+    display: flex;
+    flex-direction: column; 
+    padding-left: 70px;
+  }
+  
+  .producitem, .producdata {
+    width: 100%; 
+    max-width: 800px; 
+    margin-bottom: 20px; 
+  }
+  
+  @media (min-width: 768px) {
+    .productsContainer {
+      flex-direction: row; 
+      justify-content: center; 
+    }
+  
+    .producitem, .producdata {
+      width: 50%; 
+      margin-bottom: 0; 
+    }
+  
+    .producdata {
+      margin-left: 20px; 
+    }
+  }
+  

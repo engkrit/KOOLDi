@@ -1,0 +1,108 @@
+.container {
+    border: 2px solid #007C1B;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 100%; 
+    margin: auto; 
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  .content1 {
+    font-size: 20px;
+    font-family: "JetBrains Mono", monospace;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  .content2 {
+    font-family: "JetBrains Mono", monospace;
+    margin-bottom: 50px;
+  }
+
+
+  .roundedInputContaine {
+    display: flex;
+    margin-bottom: 20px; 
+  }
+  
+  .roundedInput {
+    flex: 1; 
+    padding: 10px;
+    padding-left: 15px;
+    font-size: 15px;
+    border-color: #007C1B;
+    border-radius: 20px;
+    background-color: transparent;
+    color: #007C1B;
+    margin-right: 10px; 
+  }
+  
+  .roundedInput:last-child {
+    margin-right: 0; 
+  }
+  
+  .roundedInput::placeholder {
+    color: black;
+    opacity: 0.7;
+  }
+  
+  .roundedInput:focus {
+    outline: none;
+    background-color: transparent;
+  }
+  
+
+  .content6 {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  .content7 {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 15px;
+  }
+
+  .content8 {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 15px;
+    margin-bottom: 40px;
+  }
+
+  .content9 {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 15px;
+  }
+  
+  .content10 {
+    font-family: "JetBrains Mono", monospace;
+    margin-top: 60px;
+    display: flex;
+    justify-content: center; 
+    height: 60px; 
+  }
+  
+  .divider {
+    border: 1px solid #007C1B;
+    margin-bottom: 40px;
+  }
+
+  .responsiveImageWrapper {
+    display: block;
+    width: 100%;
+    height: 50px;
+  }
+  
+
+.button {
+  font-family: "JetBrains Mono", monospace;
+  border-radius: 10px;
+  border-color: transparent;
+  width: 100%;
+  height: 50px;
+  background-color: #E67E22  ;
+  color: white;
+  font-size: 20px;
+}
