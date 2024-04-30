@@ -1,0 +1,83 @@
+.container {
+    border: 2px solid #007C1B;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 100%; 
+    margin: auto; 
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  .content1 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  .content2 {
+    margin-bottom: 50px;
+  }
+
+
+  .roundedInputContaine {
+    display: flex;
+    margin-bottom: 20px; /* เพิ่มระยะห่างด้านล่าง */
+  }
+  
+  .roundedInput {
+    flex: 1; /* ทำให้ input ขยายตามพื้นที่ที่เหลือของ container */
+    padding: 10px;
+    padding-left: 15px;
+    font-size: 15px;
+    border-color: #007C1B;
+    border-radius: 20px;
+    background-color: transparent;
+    color: #007C1B;
+    margin-right: 10px; /* เพิ่มระยะห่างด้านขวาของ input */
+  }
+  
+  .roundedInput:last-child {
+    margin-right: 0; /* ไม่ต้องเพิ่ม margin ของ input สุดท้าย */
+  }
+  
+  .roundedInput::placeholder {
+    color: black;
+    opacity: 0.7;
+  }
+  
+  .roundedInput:focus {
+    outline: none;
+    background-color: transparent;
+  }
+  
+
+  .content6 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  .content7 {
+    font-size: 15px;
+  }
+
+  .content8 {
+    font-size: 15px;
+    margin-bottom: 40px;
+  }
+
+  .content9 {
+    font-size: 15px;
+  }
+  
+  .content10 {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center; /* จัดให้อยู่ตรงกลางตามแนวนอน */
+    height: 60px; /* ปรับสูงของ div ตามต้องการ */
+  }
+  
+  .divider {
+    border: 1px solid #007C1B;
+    margin-bottom: 40px;
+  }

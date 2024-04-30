@@ -1,0 +1,36 @@
+/* .productsContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+} */
+
+/* styles/CartSummary.module.css */
+
+.productsContainer {
+    display: flex;
+    flex-direction: column; /* จัดเนื้อหาในแนวดิ่ง */
+    /* align-items: center;  */
+  }
+  
+  .producitem, .producdata {
+    width: 100%; /* กำหนดความกว้างเต็มระบบ */
+    max-width: 800px; /* กำหนดความกว้างสูงสุดของเนื้อหา */
+    margin-bottom: 20px; /* เพิ่มระยะห่างด้านล่างระหว่างส่วน */
+  }
+  
+  @media (min-width: 768px) {
+    .productsContainer {
+      flex-direction: row; /* จัดเนื้อหาในแนวนอน */
+      justify-content: center; /* จัดให้อยู่ตรงกลางตามแนวนอน */
+    }
+  
+    .producitem, .producdata {
+      width: 50%; /* แบ่งเป็น 2 ส่วนเท่ากัน */
+      margin-bottom: 0; /* ไม่ต้องเพิ่มระยะห่างด้านล่าง */
+    }
+  
+    .producdata {
+      margin-left: 20px; /* เพิ่มระยะห่างด้านซ้ายระหว่างส่วน */
+    }
+  }
+  
