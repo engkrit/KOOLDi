@@ -45,11 +45,11 @@ export default function AdminSystem() {
   const router = useRouter();
 
   const handlePm = () => {
-    router.push('/signin');
+    router.push('/');
   };
 
   const handleUm = () => {
-    router.push('/signin'); 
+    router.push('/'); 
   };
 
   return (

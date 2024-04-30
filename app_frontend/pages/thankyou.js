@@ -13,7 +13,6 @@ export default function ThankYou() {
 
   return (
     <div className={styles.container}>
-      <Header />
       <main className={styles.main}>
         <div className={styles.head1}>
           <div className={styles.imageContainer}>
@@ -27,7 +26,6 @@ export default function ThankYou() {
         </div>
         <button className={styles.button} onClick={handleOrderClick}>กลับหน้าหลัก</button>
       </main>
-      <Footer />
     </div>
   );
 }

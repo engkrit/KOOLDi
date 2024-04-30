@@ -5,6 +5,7 @@ import Link from "next/link";
 import Head from 'next/head';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import styled from 'styled-components';
+import { useState } from 'react';
 
 
 export default function ProductDetail() {
@@ -236,62 +237,73 @@ export default function ProductDetail() {
     return productData[productId];
   };
 
-  const product = getProductData(id);
+    const product = getProductData(id);
 
-const ResponsiveImage = styled.img`
-  max-width: 100%;
-  height: auto;
-`;
+    const ResponsiveImage = styled.img`
+      max-width: 100%;
+      height: auto;
+    `;
 
-const handleOrderClick1 = () => {
-  router.push('/maincart');
-};
+    const handleOrderClick1 = () => {
+      router.push('/maincart');
+    };
+
+    const [quantity, setQuantity] = useState(1);
+
+    const increaseQuantity = () => {
+      setQuantity(quantity + 1);
+    }
+
+    const decreaseQuantity = () => {
+      if (quantity > 1) {
+          setQuantity(quantity - 1);
+      }
+    }
 
 
+    return (
+        <>
+          <Head>
+            <link
+              rel="stylesheet"
+              href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+              integrity="sha384-KyZXEAg3QhqLMpG8r+6/jtWnj2Iy4L6S40sMzCGZKhR8+O4JacR3f3EdfcC4JwJ6"
+              crossOrigin="anonymous"
+            />
+          </Head>
+          <div className={styles.container}>
 
-return (
-    <>
-      <Head>
-        <link
-          rel="stylesheet"
-          href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
-          integrity="sha384-KyZXEAg3QhqLMpG8r+6/jtWnj2Iy4L6S40sMzCGZKhR8+O4JacR3f3EdfcC4JwJ6"
-          crossOrigin="anonymous"
-        />
-      </Head>
-      <div className={styles.container}>
-
-        <div className={styles.content}>
-          <div className={`${styles.allcontent} row `}> 
-            <div className={`${styles.product} col-sm-6 mb-5 mb-lg-0 `}>
-                <ResponsiveImage src={product.imageUrl} width={1000} height={1000} alt={product.name} />
-			      </div>
-            <div class={`${styles.content0} col-sm-6 mb-5 mb-lg-0 `}>
-                <div className={`${styles.content1} row `}>{product.type}</div>
-                <div className={`${styles.content2} row `}>{product.name}</div>
-                <div className={`${styles.content3} row `}>{product.price}</div>
-                <div className={`${styles.content4} row `}>จำนวน</div>
-                <div className={`${styles.quantityContainer} input-group mb-3 d-flex align-items-center`}>
-                    <div className="input-group-prepend">
-                        <button className="btn btn-outline-[007C1B] decrease" type="button">−</button>
-                    </div>
-                    <input type="text" className="form-control text-center quantity-amount" value="1" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1"/>
-                    <div className="input-group-append">
-                        <button className="btn btn-outline-[007C1B] increase" type="button">+</button>
-                    </div>
+            <div className={styles.content}>
+              <div className={`${styles.allcontent} row `}> 
+                <div className={`${styles.product} col-sm-6 mb-5 mb-lg-0 `}>
+                    <ResponsiveImage src={product.imageUrl} width={1000} height={1000} alt={product.name} />
                 </div>
-                <div className={styles.content5} >
-                  <button className={styles.btbuy} onClick={handleOrderClick1}>เพิ่มลงตะกร้าสินค้า</button>
+                <div class={`${styles.content0} col-sm-6 mb-5 mb-lg-0 `}>
+                    <div className={`${styles.content1} row `}>{product.type}</div>
+                    <div className={`${styles.content2} row `}>{product.name}</div>
+                    <div className={`${styles.content3} row `}>{product.price}</div>
+                    <div className={`${styles.content4} row `}>จำนวน</div>
+                    <div className={`${styles.quantityContainer} input-group mb-3 d-flex align-items-center`}>
+                        <div className="input-group-prepend">
+                            <button className="btn btn-outline-[007C1B] decrease" type="button" onClick={decreaseQuantity}>−</button>
+                        </div>
+                        <input type="text" className="form-control text-center quantity-amount" value={quantity} placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1" readOnly />
+                        <div className="input-group-append">
+                            <button className="btn btn-outline-[007C1B] increase" type="button" onClick={increaseQuantity}>+</button>
+                        </div>
+                    </div>
+                    <div className={styles.content5} >
+                      <button className={styles.btbuy} onClick={handleOrderClick1}>เพิ่มลงตะกร้าสินค้า</button>
+                    </div>
+                    <hr className={styles.divider}/>
+                    <div className={`${styles.content6} row `}>รายละเอียดสินค้า</div>
+                    <div className={`${styles.content7} row `}>ประเภท: {product.thtype}</div>
+                    <div className={`${styles.content8} row `}>ศิลปิน: {product.artist}</div>
+                    <div className={`${styles.content9} row `}>ค่าย: {product.company}</div>
                 </div>
-                <hr className={styles.divider}/>
-                <div className={`${styles.content6} row `}>รายละเอียดสินค้า</div>
-                <div className={`${styles.content7} row `}>ประเภท: {product.thtype}</div>
-                <div className={`${styles.content8} row `}>ศิลปิน: {product.artist}</div>
-                <div className={`${styles.content9} row `}>ค่าย: {product.company}</div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-    </>
-  );
-}
+        </>
+      );
+    }

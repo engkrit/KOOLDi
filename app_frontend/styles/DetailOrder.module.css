@@ -34,6 +34,9 @@
     font-family: "JetBrains Mono", monospace;
     margin-top: 70px;
     font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
 
@@ -52,4 +55,8 @@
     background-color: #E67E22  ;
     color: white;
     font-size: 20px;
+  }
+
+  .imgbutton {
+    width: 200px;
   }
